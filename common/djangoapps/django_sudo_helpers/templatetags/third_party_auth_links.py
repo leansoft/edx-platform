@@ -5,7 +5,7 @@ from django import template
 from django.template.response import TemplateResponse
 
 from django_sudo_helpers.pipeline import AUTH_ENTRY_SUDO
-import third_party_auth
+from third_party_auth import pipeline, is_enabled as is_third_party_auth_enabled
 
 
 register = template.Library()   # pylint: disable=invalid-name
@@ -18,8 +18,8 @@ def third_party_auth_links(context):
     {% third_party_auth_links %}
     """
     request = context['request']
-    auth_states = third_party_auth.pipeline.get_provider_user_states(request.user)
-    if third_party_auth.is_enabled():
+    auth_states = pipeline.get_provider_user_states(request.user)
+    if is_third_party_auth_enabled():
         from student.helpers import auth_pipeline_urls, get_next_url_for_login_page
 
         redirect_to = get_next_url_for_login_page(request)

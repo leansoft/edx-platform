@@ -372,7 +372,7 @@ class DjangoSudoPageTest(StudioCourseTest):
             self.browser, self.course_info['org'], self.course_info['number'], self.course_info['run']
         )
 
-    def test_third_party_auth_on_sudo_page_with_unlinked(self):
+    def test_third_party_auth_on_sudo_page_with_unlinked_account(self):
         """
         Test that dummy auth button is disabled on sudo page when no account is linked.
         """
@@ -380,7 +380,7 @@ class DjangoSudoPageTest(StudioCourseTest):
         sudo_password_page.visit()
         self.assertTrue(sudo_password_page.is_dummy_auth_button_disabled)
 
-    def test_third_party_auth_on_sudo_page_with_linked(self):
+    def test_third_party_auth_on_sudo_page_with_linked_account(self):
         """
         Test that user can authenticate on sudo page with dummy third party auth.
         """
