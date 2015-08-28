@@ -404,6 +404,32 @@ class YouTubeVideoTest(VideoBaseTest):
 
         self.assertTrue(self.video.is_video_rendered('html5'))
 
+    def test_video_with_youtube_blocked_delay(self):
+        """
+        Scenario: Video is rendered in HTML5 mode when the YouTube API is blocked
+                  but we find out after the initial request to YouTube times out
+        Given the YouTube server response time is greater than 1.5 seconds
+        And the YouTube API is blocked, which we find out after 2.5 seconds
+        And the course has a Video component in "Youtube_HTML5" mode
+        Then the video has rendered in "HTML5" mode
+        And the video has only loaded once
+        """
+        # configure youtube server
+        self.youtube_configuration.update({
+            'time_to_response': 2.0,
+            'youtube_api_blocked': True,
+            'youtube_api_blocked_delay': 3.0,
+        })
+
+        self.metadata = self.metadata_for_mode('youtube_html5')
+
+        self.navigate_to_video()
+
+        self.assertTrue(self.video.is_video_rendered('html5'))
+
+        # The video should only be loaded once
+        self.assertEqual(len(self.video.q(css='video')), 1)
+
     def test_html5_video_rendered_with_youtube_captions(self):
         """
         Scenario: User should see Youtube captions for If there are no transcripts
