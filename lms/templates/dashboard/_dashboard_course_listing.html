@@ -89,13 +89,13 @@ from student.helpers import (
           <span class="info-course-id">${course.display_number_with_default | h}</span>
           <span class="info-date-block" data-tooltip="Hi">
           % if course.has_ended():
-            ${_("Ended - {end_date}").format(end_date=course.end_datetime_text("SHORT_DATE"))}
+            ${_("Geëindigd - {end_date}").format(end_date=course.end_datetime_text("SHORT_DATE"))}
           % elif course.has_started():
-            ${_("Started - {start_date}").format(start_date=course.start_datetime_text("SHORT_DATE"))}
+            ${_("Gestart - {start_date}").format(start_date=course.start_datetime_text("SHORT_DATE"))}
           % elif course.start_date_is_still_default: # Course start date TBD
             ${_("Coming Soon")}
           % else:   # hasn't started yet
-            ${_("Starts - {start_date}").format(start_date=course.start_datetime_text("SHORT_DATE"))}
+            ${_("Begint op - {start_date}").format(start_date=course.start_datetime_text("SHORT_DATE"))}
           % endif
           </span>
         </div>
@@ -104,15 +104,15 @@ from student.helpers import (
             % if show_courseware_link:
               % if course.has_ended():
                 % if not is_course_blocked:
-                  <a href="${course_target}" class="enter-course archived">${_('View Archived Course')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
+                  <a href="${course_target}" class="enter-course archived">${_('Bekijk gearchiveerde omooc')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
                 % else:
-                  <a class="enter-course-blocked archived">${_('View Archived Course')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
+                  <a class="enter-course-blocked archived">${_('Bekijk gearchiveerde omooc')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
                 % endif
               % else:
                 % if not is_course_blocked:
-                  <a href="${course_target}" class="enter-course">${_('View Course')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
+                  <a href="${course_target}" class="enter-course">${_('Bekijk omooc')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
                 % else:
-                  <a class="enter-course-blocked">${_('View Course')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
+                  <a class="enter-course-blocked">${_('Bekijk omooc')}<span class="sr">&nbsp;${course.display_name_with_default}</span></a>
                 % endif
               % endif
 

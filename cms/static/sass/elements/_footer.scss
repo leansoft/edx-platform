@@ -21,7 +21,7 @@
     }
 
     .colophon {
-      width: flex-grid(4, 12);
+
       @include float(left);
       @include margin-right(flex-gutter(2));
     }
@@ -71,6 +71,7 @@
     .footer-about-copyright, .footer-about-openedx {
       display: inline-block;
       vertical-align: middle;
+      float: right;
     }
 
     // platform trademarks
