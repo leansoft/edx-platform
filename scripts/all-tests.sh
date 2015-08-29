@@ -19,6 +19,7 @@ doCheckVars() {
         SCRIPT_TO_RUN=scripts/circle-ci-tests.sh
 
     elif [ -n "$JENKINS_HOME" ] ; then
+        unset NO_PREREQ_INSTALL
         source scripts/jenkins-common.sh
         SCRIPT_TO_RUN=scripts/generic-ci-tests.sh
     fi
