@@ -28,7 +28,7 @@ class CoursewareTab(EnrolledTab):
     The main courseware view.
     """
     type = 'courseware'
-    title = ugettext_noop('Courseware')
+    title = ugettext_noop('Overzicht')
     priority = 10
     view_name = 'courseware'
     is_movable = False
@@ -40,7 +40,7 @@ class CourseInfoTab(CourseTab):
     The course info view.
     """
     type = 'course_info'
-    title = ugettext_noop('Course Info')
+    title = ugettext_noop('Algemeen')
     priority = 20
     view_name = 'info'
     tab_id = 'info'
@@ -75,7 +75,7 @@ class ProgressTab(EnrolledTab):
     The course progress view.
     """
     type = 'progress'
-    title = ugettext_noop('Progress')
+    title = ugettext_noop('Voortgang')
     priority = 40
     view_name = 'progress'
     is_hideable = True
@@ -225,7 +225,7 @@ class ExternalDiscussionCourseTab(LinkTab):
 
     type = 'external_discussion'
     # Translators: 'Discussion' refers to the tab in the courseware that leads to the discussion forums
-    title = ugettext_noop('Discussion')
+    title = ugettext_noop('Discussie')
     priority = None
     is_default = False
 

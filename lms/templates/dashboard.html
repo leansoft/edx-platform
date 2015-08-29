@@ -66,7 +66,7 @@ from django.core.urlresolvers import reverse
 <section class="container dashboard" id="dashboard-main">
   <section class="my-courses" id="my-courses" role="main" aria-label="Content">
     <header class="wrapper-header-courses">
-      <h2 class="header-courses">${_("Current Courses")}</h2>
+      <h2 class="header-courses">${_("Huidige omoocs")}</h2>
     </header>
 
 
@@ -102,7 +102,7 @@ from django.core.urlresolvers import reverse
 
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <a href="${marketing_link('COURSES')}">
-            ${_("Find courses now!")}
+            ${_("Zoek omooc nu!")}
           </a>
         %endif
       </section>
@@ -154,8 +154,8 @@ from django.core.urlresolvers import reverse
     <section class="user-info">
       <ul>
         <li class="heads-up">
-          <span class="title">${_("Want to change your account settings?")}</span>
-          <span class="copy">${_("Click the arrow next to your username above.")}</span>
+          <span class="title">${_("Wil je jouw account instellingen wijzigen?")}</span>
+          <span class="copy">${_("Klik dan op het pijltje naast je username bovenaan de pagina.")}</span>
         </li>
 
         % if len(order_history_list):
@@ -186,7 +186,7 @@ from django.core.urlresolvers import reverse
 
     <header>
       <h2 id="email-settings-title">
-        ${_("Email Settings for {course_number}").format(course_number='<span id="email_settings_course_number"></span>')}
+        ${_("Email instellingen voor {course_number}").format(course_number='<span id="email_settings_course_number"></span>')}
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
           ${_("window open")}
@@ -197,9 +197,9 @@ from django.core.urlresolvers import reverse
 
     <form id="email_settings_form" method="post">
       <input name="course_id" id="email_settings_course_id" type="hidden" />
-      <label>${_("Receive course emails")} <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
+      <label>${_("Ontvang omooc mailsemails")} <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
       <div class="submit">
-        <input type="submit" id="submit" value="${_("Save Settings")}" />
+        <input type="submit" id="submit" value="${_("Instellingen opslaan")}" />
       </div>
     </form>
   </div>
@@ -211,7 +211,7 @@ from django.core.urlresolvers import reverse
       <i class="icon fa fa-remove"></i>
       <span class="sr">
         ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
-        ${_("Close")}
+        ${_("Sluiten")}
       </span>
     </button>
 

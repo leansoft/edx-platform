@@ -181,7 +181,6 @@ def _footer_navigation_links():
             ("faq", marketing_link("FAQ"), _("FAQs")),
             ("contact", marketing_link("CONTACT"), _("Contact")),
             ("jobs", marketing_link("JOBS"), _("Jobs")),
-            ("donate", marketing_link("DONATE"), _("Donate")),
             ("sitemap", marketing_link("SITE_MAP"), _("Sitemap")),
         ]
         if link_url and link_url != "#"

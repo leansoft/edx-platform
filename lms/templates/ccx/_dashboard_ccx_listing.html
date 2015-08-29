@@ -42,15 +42,13 @@ from ccx_keys.locator import CCXLocator
           % endif
         </h3>
         <div class="course-info">
-          <span class="info-university">${get_course_about_section(course, 'university')} - </span>
-          <span class="info-course-id">${course.display_number_with_default | h}</span>
           <span class="info-date-block" data-tooltip="Hi">
           % if ccx.has_ended():
-            ${_("Ended - {end_date}").format(end_date=ccx.end_datetime_text("SHORT_DATE"))}
+            ${_("Geëindigd - {end_date}").format(end_date=ccx.end_datetime_text("SHORT_DATE"))}
           % elif ccx.has_started():
-            ${_("Started - {start_date}").format(start_date=ccx.start_datetime_text("SHORT_DATE"))}
+            ${_("Begonnen - {start_date}").format(start_date=ccx.start_datetime_text("SHORT_DATE"))}
           % else:   # hasn't started yet
-            ${_("Starts - {start_date}").format(start_date=ccx.start_datetime_text("SHORT_DATE"))}
+            ${_("Start op - {start_date}").format(start_date=ccx.start_datetime_text("SHORT_DATE"))}
           % endif
           </span>
         </div>
@@ -59,15 +57,15 @@ from ccx_keys.locator import CCXLocator
             <div class="course-actions">
               % if ccx.has_ended():
                 % if not is_course_blocked:
-                  <a href="${ccx_target}" class="enter-course archived">${_('View Archived Custom Course')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
+                  <a href="${ccx_target}" class="enter-course archived">${_('Bekijk gearchiveerde omooc')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
                 % else:
-                  <a class="enter-course-blocked archived">${_('View Archived Custom Course')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
+                  <a class="enter-course-blocked archived">${_('Bekijk gearchiveerde omooc')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
                 % endif
               % else:
                 % if not is_course_blocked:
-                  <a href="${ccx_target}" class="enter-course">${_('View Custom Course')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
+                  <a href="${ccx_target}" class="enter-course">${_('Bekijk omooc')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
                 % else:
-                  <a class="enter-course-blocked">${_('View Custom Course')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
+                  <a class="enter-course-blocked">${_('Bekijk omooc')}<span class="sr">&nbsp;${ccx.display_name}</span></a>
                 % endif
               % endif
 

@@ -60,7 +60,7 @@ from django_comment_client.permissions import has_permission
     <div class="forum-edit-post-form-wrapper"></div>
     <div class="form-row">
       <label class="sr" for="edit-post-title">${_("Edit post title")}</label>
-      <input type="text" id="edit-post-title" class="edit-post-title" name="title" value="${"<%-title %>"}" placeholder="${_('Title') | h}">
+      <input type="text" id="edit-post-title" class="edit-post-title" name="title" value="${"<%-title %>"}" placeholder="${_('Titel') | h}">
     </div>
     <div class="form-row">
       <div class="edit-post-body" name="body">${"<%- body %>"}</div>
@@ -409,31 +409,31 @@ from django_comment_client.permissions import has_permission
                 <span class="sr">${_("Title:")}</span>
                 <input aria-describedby="field_help_title" type="text" class="field-input js-post-title" name="title" placeholder="${_('Title')}">
             </label><span class="field-help" id="field_help_title">
-                ${_("Add a clear and descriptive title to encourage participation.")}
+                ${_("Gebruik een duidelijke en omschrijvende titel om discussie te stimuleren.")}
             </span>
         </div>
-        <div class="post-field js-post-body editor" name="body" data-placeholder="${_('Enter your question or comment')}"></div>
+        <div class="post-field js-post-body editor" name="body" data-placeholder="${_('Typ je vraag of opmerking')}"></div>
         <div class="post-options">
             <label class="post-option is-enabled">
                 <input type="checkbox" name="follow" class="post-option-input js-follow" checked>
-                <i class="icon fa fa-star"></i>${_("follow this post")}
+                <i class="icon fa fa-star"></i>${_("Volg dit bericht")}
             </label>
             ${'<% if (allow_anonymous) { %>'}
             <label class="post-option">
                 <input type="checkbox" name="anonymous" class="post-option-input js-anon">
-                ${_("post anonymously")}
+                ${_("publiceer anoniem")}
             </label>
             ${'<% } %>'}
             ${'<% if (allow_anonymous_to_peers) { %>'}
             <label class="post-option">
                 <input type="checkbox" name="anonymous_to_peers" class="post-option-input js-anon-peers">
-                ${_("post anonymously to classmates")}
+                ${_("publiceer anoniem naar medestudenten")}
             </label>
             ${'<% } %>'}
         </div>
         <div>
-            <input type="submit" class="submit" value="${_('Add Post')}">
-            <a href="#" class="cancel">${_('Cancel')}</a>
+            <input type="submit" class="submit" value="${_('Publiceer')}">
+            <a href="#" class="cancel">${_('Annuleer')}</a>
         </div>
     </form>
 </script>
@@ -444,23 +444,23 @@ from django_comment_client.permissions import has_permission
             <span class="field-label-text">
                 ## Translators: This is the label for a control to
                 ## select a forum post type
-                ${_("Post type:")}
-            </span><fieldset class="field-input"><legend class="sr">${_("Post type:")}</legend>
+                ${_("Type bericht:")}
+            </span><fieldset class="field-input"><legend class="sr">${_("Type bericht:")}</legend>
                 <input aria-describedby="field_help_post_type" type="radio" name="${"<%= form_id %>"}-post-type" class="post-type-input" id="${"<%= form_id %>"}-post-type-question" value="question">
                 <label for="${"<%= form_id %>"}-post-type-question" class="post-type-label">
                     <i class="icon fa fa-question"></i>
                     ## Translators: This is a forum post type
-                    ${_("Question")}
+                    ${_("Vraag")}
                 </label>
                 <input aria-describedby="field_help_post_type" type="radio" name="${"<%= form_id %>"}-post-type" class="post-type-input" id="${"<%= form_id %>"}-post-type-discussion" value="discussion" checked>
                 <label for="${"<%= form_id %>"}-post-type-discussion" class="post-type-label">
                     <i class="icon fa fa-comments"></i>
                     ## Translators: This is a forum post type
-                    ${_("Discussion")}
+                    ${_("Discussie")}
                 </label>
             </fieldset>
         </div><span class="field-help" id="field_help_post_type">
-            ${_("Questions raise issues that need answers. Discussions share ideas and start conversations.")}
+
         </span>
     </div>
 </script>
