@@ -21,7 +21,7 @@ from django_comment_client.permissions import has_permission
                 <div class="add-response">
                     <button class="button add-response-btn">
                         <i class="icon fa fa-reply"></i>
-                        <span class="add-response-btn-text">${_('Add A Response')}</span>
+                        <span class="add-response-btn-text">${_('Plaats een reactie')}</span>
                     </button>
                 </div>
                 <ol class="responses js-response-list"/>
@@ -31,19 +31,19 @@ from django_comment_client.permissions import has_permission
                 </div>
                 % if course is UNDEFINED or has_permission(user, 'create_comment', course.id):
                 <form class="discussion-reply-new" data-id="${'<%- id %>'}">
-                    <h4>${_("Post a response:")}</h4>
+                    <h4>${_("Plaats een reactie:")}</h4>
                     <ul class="discussion-errors"></ul>
                     <div class="reply-body" data-id="${'<%- id %>'}"></div>
                     <div class="reply-post-control">
-                        <a class="discussion-submit-post control-button" href="#">${_("Submit")}</a>
+                        <a class="discussion-submit-post control-button" href="#">${_("Verstuur")}</a>
                     </div>
                 </form>
                 % endif
             </div>
         </div>
         <div class="post-tools">
-            <a href="javascript:void(0)" class="forum-thread-expand"><span class="icon fa fa-plus"/> ${_("Expand discussion")}</a>
-            <a href="javascript:void(0)" class="forum-thread-collapse"><span class="icon fa fa-minus"/> ${_("Collapse discussion")}</a>
+            <a href="javascript:void(0)" class="forum-thread-expand"><span class="icon fa fa-plus"/> ${_("Discussie uitklappen")}</a>
+            <a href="javascript:void(0)" class="forum-thread-collapse"><span class="icon fa fa-minus"/> ${_("Discussie inklappen")}</a>
         </div>
     </article>
 </script>
@@ -59,7 +59,7 @@ from django_comment_client.permissions import has_permission
     <ul class="post-errors"></ul>
     <div class="forum-edit-post-form-wrapper"></div>
     <div class="form-row">
-      <label class="sr" for="edit-post-title">${_("Edit post title")}</label>
+      <label class="sr" for="edit-post-title">${_("Bewerk bericht titel")}</label>
       <input type="text" id="edit-post-title" class="edit-post-title" name="title" value="${"<%-title %>"}" placeholder="${_('Titel') | h}">
     </div>
     <div class="form-row">
@@ -84,7 +84,7 @@ from django_comment_client.permissions import has_permission
                 <div class="comment-body" id="add-new-comment" data-id="${'<%- wmdId %>'}"
                 data-placeholder="${_('Add a comment') | h}"></div>
                 <div class="comment-post-control">
-                    <a class="discussion-submit-comment control-button" href="#">${_("Submit")}</a>
+                    <a class="discussion-submit-comment control-button" href="#">${_("Verstuur")}</a>
                 </div>
             </form>
             % endif
@@ -407,9 +407,9 @@ from django_comment_client.permissions import has_permission
         <div class="post-field">
             <label class="field-label">
                 <span class="sr">${_("Title:")}</span>
-                <input aria-describedby="field_help_title" type="text" class="field-input js-post-title" name="title" placeholder="${_('Title')}">
+                <input aria-describedby="field_help_title" type="text" class="field-input js-post-title" name="title" placeholder="${_('Titel')}">
             </label><span class="field-help" id="field_help_title">
-                ${_("Gebruik een duidelijke en omschrijvende titel om discussie te stimuleren.")}
+                ${_("Gebruik een duidelijke en omschrijvende titel om de discussie te stimuleren.")}
             </span>
         </div>
         <div class="post-field js-post-body editor" name="body" data-placeholder="${_('Typ je vraag of opmerking')}"></div>
@@ -481,7 +481,7 @@ from django_comment_client.permissions import has_permission
 <script aria-hidden="true" type="text/template" id="topic-template">
     ## Using div here instead of label because we are using a non-native control
     <div class="field-label">
-        <span class="field-label-text">${_("Topic Area:")}</span><div class="field-input post-topic">
+        <span class="field-label-text">${_("Topic:")}</span><div class="field-input post-topic">
             <a href="#" class="post-topic-button">
                 <span class="sr">${_("Discussion topics; current selection is: ")}</span>
                 <span class="js-selected-topic"></span>
@@ -496,7 +496,7 @@ from django_comment_client.permissions import has_permission
            </div>
        </div>
     </div><span class="field-help" id="field_help_topic_area">
-        ${_("Add your post to a relevant topic to help others find it.")}
+        ${_("Voeg je bericht toe aan een relevant topic zodat andere het makkelijker kunnen vinden.")}
     </span>
 </script>
 

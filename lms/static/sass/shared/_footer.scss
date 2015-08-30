@@ -38,7 +38,6 @@
 
     // colophon
     .colophon {
-      @include span-columns(8);
 
       @include media($bp-small) {
         @include fill-parent();
@@ -168,7 +167,7 @@
       @include span-columns(4);
       @include text-align(right);
       vertical-align: bottom;
-
+      float: right !important;
       @include media($bp-small) {
         @include fill-parent();
       }

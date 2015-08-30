@@ -71,7 +71,7 @@ browser and pasting the output.  When that file changes, this one should be rege
                   This thread is closed.
                 </div>
                 <form class="discussion-reply-new" data-id="<%- id %>">
-                    <h4>Post a response:</h4>
+                    <h4>Plaats een antwoord:</h4>
                     <ul class="discussion-errors"></ul>
                     <div class="reply-body" data-id="<%- id %>"></div>
                     <div class="reply-post-control">

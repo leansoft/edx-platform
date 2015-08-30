@@ -129,7 +129,7 @@ $ ->
         _append = appended_id || ""
         wmdInputId = "wmd-input#{_append}"
         $wmdPreviewContainer = $("<div>").addClass("wmd-preview-container")
-            .append($("<div>").addClass("wmd-preview-label").text(gettext("Preview")))
+            .append($("<div>").addClass("wmd-preview-label").text(gettext("Voorbeeld")))
             .append($("<div>").attr("id", "wmd-preview#{_append}").addClass("wmd-panel wmd-preview"))
         $wmdPanel = $("<div>").addClass("wmd-panel")
                    .append($("<div>").attr("id", "wmd-button-bar#{_append}"))

@@ -4,13 +4,13 @@
             <% if (obj.group_name) { %>
                 <%-
                 interpolate(
-                    gettext('This post is visible only to %(group_name)s.'),
+                    gettext('Dit bericht is alleen zichtbaar voor %(group_name).'),
                     {group_name: obj.group_name},
                     true
                 )
                 %>
             <% } else { %>
-                <%- gettext('This post is visible to everyone.') %>
+                <%- gettext('Dit bericht is zichtbaar voor iedereen.') %>
             <% } %>
         </div>
 

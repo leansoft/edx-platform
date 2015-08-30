@@ -317,7 +317,7 @@ def _section_course_info(course, access):
 
     section_data = {
         'section_key': 'course_info',
-        'section_display_name': _('Course Info'),
+        'section_display_name': _('Cursus info'),
         'access': access,
         'course_id': course_key,
         'course_display_name': course.display_name,

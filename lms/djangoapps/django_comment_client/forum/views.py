@@ -55,7 +55,7 @@ class DiscussionTab(EnrolledTab):
     """
 
     type = 'discussion'
-    title = ugettext_noop('Discussion')
+    title = ugettext_noop('Discussie')
     priority = None
     view_name = 'django_comment_client.forum.views.forum_form_discussion'
     is_hideable = settings.FEATURES.get('ALLOW_HIDING_DISCUSSION_TAB', False)
