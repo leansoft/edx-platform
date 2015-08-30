@@ -306,8 +306,8 @@ class CourseTabList(List):
         """
 
         course.tabs.extend([
-            CourseTab.load('courseware'),
-            CourseTab.load('course_info')
+            CourseTab.load('courseware', name=_('Overzicht')),
+            CourseTab.load('course_info', name=_('Cursus info'))
         ])
 
         # Presence of syllabus tab is indicated by a course attribute
@@ -322,7 +322,7 @@ class CourseTabList(List):
                 'external_discussion', name=_('External Discussion'), link=course.discussion_link
             )
         else:
-            discussion_tab = CourseTab.load('discussion')
+            discussion_tab = CourseTab.load('discussion', name=_('Discussie'))
 
         course.tabs.extend([
             CourseTab.load('textbooks'),
