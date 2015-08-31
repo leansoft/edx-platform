@@ -238,10 +238,10 @@ class UserProfile(models.Model):
     VALID_YEARS = range(this_year, this_year - 120, -1)
     year_of_birth = models.IntegerField(blank=True, null=True, db_index=True)
     GENDER_CHOICES = (
-        ('m', ugettext_noop('Male')),
-        ('f', ugettext_noop('Female')),
+        ('m', ugettext_noop('Man')),
+        ('f', ugettext_noop('Vrouw')),
         # Translators: 'Other' refers to the student's gender
-        ('o', ugettext_noop('Other'))
+        ('o', ugettext_noop('Overig'))
     )
     gender = models.CharField(
         blank=True, null=True, max_length=6, db_index=True, choices=GENDER_CHOICES

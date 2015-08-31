@@ -285,7 +285,7 @@ import calendar
           % if settings.REGISTRATION_EXTRA_FIELDS['gender'] != 'hidden':
           <li class="field-group field-gender">
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['gender']} select" id="field-gender">
-              <label for="gender">${_("Gender")}</label>
+              <label for="gender">${_("Geslacht")}</label>
               <select id="gender" name="gender" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['gender'] == 'required' else ''}>
                 <option value="">--</option>
                 %for code, gender in UserProfile.GENDER_CHOICES:
@@ -298,7 +298,7 @@ import calendar
           % if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] != 'hidden':
           <li class="field-group field-yob">
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['year_of_birth']} select" id="field-yob">
-              <label for="yob">${_("Year of Birth")}</label>
+              <label for="yob">${_("Geboortejaar")}</label>
               <select id="yob" name="year_of_birth" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] == 'required' else ''}>
                 <option value="">--</option>
                 %for year in UserProfile.VALID_YEARS:
