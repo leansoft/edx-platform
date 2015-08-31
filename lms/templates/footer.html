@@ -54,7 +54,13 @@
       </nav>
 
       <div class="wrapper-logo">
-        <p>
+        <p style="text-align: center">
+            <a href="http://www.public-cinema.com">
+                <img alt="organization logo" src="${static.url("images/footer/public-cinema.png")}">
+                <h1 style="margin-top: 20px; font-size: 20px;">Public Cinema is partner van omooc</h1>
+                <hr />
+            </a>
+
           <a href="/">
             ## The default logo is a placeholder.
             ## You can either replace this link entirely or update
@@ -64,18 +70,7 @@
             ## (e.g. a blog or marketing front-end) to provide a consistent
             ## user experience.  See the branding app for details.
 
-              <img alt="organization logo" src="${static.url("images/footer/A-O1.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/beter-werken1.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/IKPOB1.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/IPO1.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/PC4.png")}">
-              <img alt="organization logo" src="${static.url("images/footer/test-logo-kleiner.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/VDW1.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/VGS1.jpg")}">
-              <img alt="organization logo" src="${static.url("images/footer/VNG1.jpg")}">
-
-
-              <img alt="organization logo" src="${static.url("images/footer/VOM1.jpg")}">
+              <img alt="organization logo" style="width: 100%" src="${static.url("images/footer/omooc-partners-ambitie.jpg")}">
 
 
           </a>
@@ -105,6 +100,17 @@
     % endif
   </footer>
 </div>
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+    __gaTracker('create', 'UA-61864592-1', 'auto');
+    __gaTracker('require', 'displayfeatures');
+    __gaTracker('send','pageview');
+
+</script>
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>

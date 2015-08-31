@@ -180,14 +180,14 @@ import calendar
           </li>
 
           <li class="field required text" id="field-name">
-            <label for="name">${_('Full Name')}</label>
+            <label for="name">${_('Voor en achternaam')}</label>
             <input id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip" />
-            <span class="tip tip-input" id="name-tip">${_("Needed for any certificates you may earn")}</span>
+            <span class="tip tip-input" id="name-tip"></span>
           </li>
           <li class="field required text" id="field-username">
-            <label for="username">${_('Public Username')}</label>
+            <label for="username">${_('Gebruikersnaam')}</label>
             <input id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
-            <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <span class="tip tip-input" id="username-tip">${_('Je gebruikersnaam wordt gebruikt bij discussies')} <strong>(${_('Kan niet gewijzigd worden')})</strong></span>
           </li>
 
           % if third_party_auth.is_enabled() and running_pipeline:
@@ -313,16 +313,16 @@ import calendar
 
       <div class="group group-form group-form-personalinformation2">
         <ol class="list-input">
-          % if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] != 'hidden':
-          <li class="field ${settings.REGISTRATION_EXTRA_FIELDS['mailing_address']} text" id="field-address-mailing">
-            <label for="address-mailing">${_("Mailing Address")}</label>
-            <textarea id="address-mailing" name="mailing_address" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] == 'required' else ''}></textarea>
-          </li>
-          % endif
+          <!--% if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] != 'hidden':-->
+          <!--<li class="field ${settings.REGISTRATION_EXTRA_FIELDS['mailing_address']} text" id="field-address-mailing">-->
+            <!--<label for="address-mailing">${_("Mailing Address")}</label>-->
+            <!--<textarea id="address-mailing" name="mailing_address" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] == 'required' else ''}></textarea>-->
+          <!--</li>-->
+          <!--% endif-->
 
           % if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
           <li class="field ${settings.REGISTRATION_EXTRA_FIELDS['goals']} text" id="field-goals">
-            <label for="goals">${_("Please share with us your reasons for registering with {platform_name}").format(platform_name=platform_name)}</label>
+            <label for="goals">${_("Benieuwd waarom je ge&iuml;nteresseerd bent in {platform_name}. Vertel...").format(platform_name=platform_name)}</label>
             <textarea id="goals" name="goals" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['goals'] == 'required' else ''}></textarea>
           </li>
           % endif
@@ -338,7 +338,7 @@ import calendar
             % if has_extauth_info is UNDEFINED or ask_for_tos :
             <div class="field required checkbox" id="field-tos">
               <input id="tos-yes" type="checkbox" name="terms_of_service" value="true" required aria-required="true" />
-              <label for="tos-yes">${_('I agree to the {link_start}Terms of Service{link_end}').format(
+              <label for="tos-yes">${_('Ik ga akkoord met de {link_start}Terms of Service{link_end}').format(
                 link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('TOS')),
                 link_end='</a>')}</label>
             </div>
@@ -356,7 +356,7 @@ import calendar
                 else:
                   honor_code_path = marketing_link('HONOR')
               %>
-              <label for="honorcode-yes">${_('I agree to the {link_start}Honor Code{link_end}').format(
+              <label for="honorcode-yes">${_('Ik ga akkoord met de {link_start}Honor Code{link_end}').format(
                 link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),
                 link_end='</a>')}</label>
             </div>
@@ -367,7 +367,7 @@ import calendar
       </div>
 
       <div class="form-actions">
-        <button name="submit" type="submit" id="submit" class="action action-primary action-update register-button">${_('Register')} <span class="orn-plus">+</span> ${_('Create My Account')}</button>
+        <button name="submit" type="submit" id="submit" class="action action-primary action-update register-button">${_('Registreer')} <span class="orn-plus">+</span> ${_('Registreer mijn account')}</button>
       </div>
     </form>
   </section>
