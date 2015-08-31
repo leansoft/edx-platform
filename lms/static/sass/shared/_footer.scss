@@ -65,7 +65,14 @@
           }
 
 
-          .twitter{
+
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+         .twitter{
             margin-top: -5px
           }
 
@@ -76,11 +83,6 @@
           .youtube{
             margin-top: -2px;
           }
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
       }
 
       .colophon-about {
