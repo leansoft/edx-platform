@@ -272,9 +272,9 @@ from edxmako.shortcuts import marketing_link
               <a href="${tweet_action}" class="share">
                 <i class="icon fa fa-twitter"></i><span class="sr">${_("Tweet that you've registered for this course")}</span>
               </a>
-              <a href="${facebook_link}" class="share">
-                <i class="icon fa fa-thumbs-up"></i><span class="sr">${_("Post a Facebook message to say you've registered for this course")}</span>
-              </a>
+              <!--<a href="${facebook_link}" class="share">-->
+                <!--<i class="icon fa fa-thumbs-up"></i><span class="sr">${_("Post a Facebook message to say you've registered for this course")}</span>-->
+              <!--</a>-->
               <a href="${email_subject}" class="share">
                 <i class="icon fa fa-envelope"></i><span class="sr">${_("Email someone to say you've registered for this course")}</span>
               </a>
@@ -293,7 +293,7 @@ from edxmako.shortcuts import marketing_link
             % if get_course_about_section(course, "end_date") or course.end:
             <li class="important-dates-item">
                 <i class="icon fa fa-calendar"></i>
-                <p class="important-dates-item-title">${_("Classes End")}</p>
+                <p class="important-dates-item-title">${_("Cursus einden")}</p>
                 <span class="important-dates-item-text final-date">
                     % if get_course_about_section(course, "end_date"):
                         ${get_course_about_section(course, "end_date")}
