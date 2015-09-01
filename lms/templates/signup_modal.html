@@ -60,8 +60,8 @@ import calendar
 
 
           % if ask_for_fullname:
-            <label data-field="name" for="signup_fullname">${_("Full Name *")}</label>
-            <input id="signup_fullname" type="text" name="name" placeholder="${_('e.g. Your Name (for certificates)')}" required />
+            <label data-field="name" for="signup_fullname">${_("Volledige naam *")}</label>
+            <input id="signup_fullname" type="text" name="name" placeholder="${_('Jan de Boer')}" required />
           % endif
 
 	  % endif
@@ -85,7 +85,7 @@ import calendar
 
           % if settings.REGISTRATION_EXTRA_FIELDS['gender'] != 'hidden':
           <section class="gender">
-            <label data-field="gender" for="signup_gender">${_("Gender")}</label>
+            <label data-field="gender" for="signup_gender">${_("Geslacht")}</label>
             <div class="input-wrapper">
               <select id="signup_gender" name="gender">
                   <option value="">--</option>
@@ -99,7 +99,7 @@ import calendar
 
           % if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] != 'hidden':
           <section class="date-of-birth">
-            <label data-field="date-of-birth" for="signup_birth_year">${_("Year of birth")}</label>
+            <label data-field="date-of-birth" for="signup_birth_year">${_("Geboortejaar")}</label>
             <div class="input-wrapper">
               <select id="signup_birth_year" name="year_of_birth">
                 <option value="">--</option>
@@ -112,13 +112,10 @@ import calendar
           </section>
           % endif
 
-          % if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] != 'hidden':
-          <label data-field="mailing_address" for="signup_mailing_address">${_("Mailing address")}</label>
-	    <textarea id="signup_mailing_address" name="mailing_address"></textarea>
-          % endif
+
 
           % if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
-          <label data-field="goals" for="signup_goals">${_("Goals in signing up for {platform_name}").format(platform_name=settings.PLATFORM_NAME)}</label>
+          <label data-field="goals" for="signup_goals">${_("Benieuwd waarom je ge&iuml;nteresseerd bent in {platform_name}. Vertel...").format(platform_name=settings.PLATFORM_NAME)}</label>
 	    <textarea name="goals" id="signup_goals"></textarea>
           % endif
 
@@ -127,7 +124,7 @@ import calendar
         <div class="input-group">
           <label data-field="terms_of_service" class="terms-of-service" for="signup_tos">
             <input id="signup_tos" name="terms_of_service" type="checkbox" value="true">
-            ${_('I agree to the {link_start}Terms of Service{link_end}').format(
+            ${_('Ik ga akkoord met de {link_start}Terms of Service{link_end}').format(
               link_start='<a href="{url}" target="_blank">'.format(url=reverse('tos')),
               link_end='</a>') + ' *'}
           </label>
@@ -135,7 +132,7 @@ import calendar
           % if settings.REGISTRATION_EXTRA_FIELDS['honor_code'] != 'hidden':
           <label data-field="honor_code" class="honor-code" for="signup_honor">
             <input id="signup_honor" name="honor_code" type="checkbox" value="true">
-            ${_('I agree to the {link_start}Honor Code{link_end}').format(
+            ${_('Ik ga akkoord met de {link_start}Honor Code{link_end}').format(
               link_start='<a href="{url}" target="_blank">'.format(url=reverse('honor')),
               link_end='</a>') + ' *'}
           </label>
