@@ -256,9 +256,22 @@ from edxmako.shortcuts import marketing_link
 
                 facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
 
-                email_subject = u"mailto:?subject={subject}&body={body}".format(
+                email_body =  "Beste,\n";
+                email_body += "Ik heb mij geregistreerd voor #{number} \'{title}\' via {platform} {url}\n";
+                email_body += "\n";
+                email_body += "Via bovenstaande link kun je ook de online colleges volgen van deze reeks, aanvullend materiaal bekijken en deelnemen in online discussies over de thema\'s.\n"
+                email_body += "\n";
+                email_body += "Heb je nog nooit van omooc gehoord?\n"
+                email_body += "De naam omooc is een samentrekking van twee dingen. Ten eerste MOOC, afkorting voor Massive Online Open Course, een enorm belangrijke ontwikkeling in het onderwijs. Ten tweede de \'o\' van overheid, want dat is waar de omooc courses en online hoorcolleges over gaan. Samen wordt het omooc. En hoe je dat uitspreekt? Zo: \"o-moek\". Kan niet misgaan.\n";
+                email_body += "\n";
+                email_body += "Omooc is een nieuwe manier van kennis delen in de publieke sector. Een course van omooc bestaat uit vijf of acht online videocolleges. Opgebouwd rond een actueel thema en gegeven door toonaangevende sprekers. Die vertellen hun verhaal op een frisse, inspirerende manier. Je kunt de videocolleges via omooc.nl op elk moment bekijken, in jouw eigen tijd en tempo. Wil je na het college meer weten? Start via de website een discussie met de spreker of met mij als je medestudent!\n";
+                email_body += "\n";
+                email_body += "Alvast veel kijk plezier!\n";
+               email_body = escape(email_body);
+
+              email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Volg ook een cursus via {platform} online").format(platform=platform_name),
-                    body=_("Ik heb mij geregistreerd voor #{number} '{title}' {platform} {url}").format(
+                    body=_(email_body).format(
                         number=course.number,
                         title=get_course_about_section(course, 'title'),
                         platform=platform_name,
@@ -267,8 +280,16 @@ from edxmako.shortcuts import marketing_link
                             path=reverse('about_course', args=[course.id.to_deprecated_string()]),
                         )
                     )
-                ).replace(u" ", u"%20")
+                ).replace(u" ", u"%20");
               %>
+
+
+
+
+
+
+
+
               <a href="${tweet_action}" class="share">
                 <i class="icon fa fa-twitter"></i><span class="sr">${_("Tweet that you've registered for this course")}</span>
               </a>
