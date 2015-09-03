@@ -175,13 +175,9 @@ def _footer_navigation_links():
             "url": link_url,
         }
         for link_name, link_url, link_title in [
-            ("about", marketing_link("ABOUT"), _("About")),
-            ("blog", marketing_link("BLOG"), _("Blog")),
-            ("news", marketing_link("NEWS"), _("News")),
+            ("about", marketing_link("ABOUT"), _("Over")),
             ("faq", marketing_link("FAQ"), _("FAQs")),
             ("contact", marketing_link("CONTACT"), _("Contact")),
-            ("jobs", marketing_link("JOBS"), _("Jobs")),
-            ("sitemap", marketing_link("SITE_MAP"), _("Sitemap")),
         ]
         if link_url and link_url != "#"
     ]
