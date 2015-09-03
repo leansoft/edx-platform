@@ -69,12 +69,12 @@ class LoginSessionView(APIView):
 
         # Translators: This example email address is used as a placeholder in
         # a field on the login form meant to hold the user's email address.
-        email_placeholder = _(u"username@domain.com")
+        email_placeholder = _(u"gebruikersnaam@domein.nl")
 
         # Translators: These instructions appear on the login form, immediately
         # below a field meant to hold the user's email address.
         email_instructions = _(
-            u"The email address you used to register with {platform_name}"
+            u"het emailadres in waarmee u zich hebt geregistreerd bij {platform_name}"
         ).format(platform_name=settings.PLATFORM_NAME)
 
         form_desc.add_field(
@@ -91,7 +91,7 @@ class LoginSessionView(APIView):
 
         # Translators: This label appears above a field on the login form
         # meant to hold the user's password.
-        password_label = _(u"Password")
+        password_label = _(u"Wachtwoord")
 
         form_desc.add_field(
             "password",
@@ -106,7 +106,7 @@ class LoginSessionView(APIView):
         form_desc.add_field(
             "remember",
             field_type="checkbox",
-            label=_("Remember me"),
+            label=_("Blijf ingelogd"),
             default=False,
             required=False,
         )
@@ -352,15 +352,15 @@ class RegistrationView(APIView):
         """
         # Translators: This label appears above a field on the registration form
         # meant to hold the user's full name.
-        name_label = _(u"Full name")
+        name_label = _(u"Voor en achternaam")
 
         # Translators: This example name is used as a placeholder in
         # a field on the registration form meant to hold the user's name.
-        name_placeholder = _(u"Jane Doe")
+        name_placeholder = _(u"Jan de Boer")
 
         # Translators: These instructions appear on the registration form, immediately
         # below a field meant to hold the user's full name.
-        name_instructions = _(u"Needed for any certificates you may earn")
+        name_instructions = _(u"")
 
         form_desc.add_field(
             "name",
@@ -385,13 +385,13 @@ class RegistrationView(APIView):
         """
         # Translators: This label appears above a field on the registration form
         # meant to hold the user's public username.
-        username_label = _(u"Public username")
+        username_label = _(u"Gebruikersnaam")
 
         # Translators: These instructions appear on the registration form, immediately
         # below a field meant to hold the user's public username.
         username_instructions = _(
-            u"The name that will identify you in your courses - "
-            "{bold_start}(cannot be changed later){bold_end}"
+            u"Je gebruikersnaam wordt gebruikt bij discussies - "
+            "{bold_start}(Kan later niet gewijzigd worden){bold_end}"
         ).format(bold_start=u'<strong>', bold_end=u'</strong>')
 
         # Translators: This example username is used as a placeholder in
@@ -422,7 +422,7 @@ class RegistrationView(APIView):
         """
         # Translators: This label appears above a field on the registration form
         # meant to hold the user's password.
-        password_label = _(u"Password")
+        password_label = _(u"Wachtwoord")
 
         form_desc.add_field(
             "password",
@@ -447,7 +447,7 @@ class RegistrationView(APIView):
         """
         # Translators: This label appears above a dropdown menu on the registration
         # form used to select the user's highest completed level of education.
-        education_level_label = _(u"Highest level of education completed")
+        education_level_label = _(u"Hoogst behaalde niveau van educatie")
 
         form_desc.add_field(
             "level_of_education",
@@ -470,7 +470,7 @@ class RegistrationView(APIView):
         """
         # Translators: This label appears above a dropdown menu on the registration
         # form used to select the user's gender.
-        gender_label = _(u"Gender")
+        gender_label = _(u"Geslacht")
 
         form_desc.add_field(
             "gender",
@@ -493,7 +493,7 @@ class RegistrationView(APIView):
         """
         # Translators: This label appears above a dropdown menu on the registration
         # form used to select the user's year of birth.
-        yob_label = _(u"Year of birth")
+        yob_label = _(u"Geboortejaar")
 
         options = [(unicode(year), unicode(year)) for year in UserProfile.VALID_YEARS]
         form_desc.add_field(
@@ -519,12 +519,7 @@ class RegistrationView(APIView):
         # meant to hold the user's mailing address.
         mailing_address_label = _(u"Mailing address")
 
-        form_desc.add_field(
-            "mailing_address",
-            label=mailing_address_label,
-            field_type="textarea",
-            required=required
-        )
+
 
     def _add_goals_field(self, form_desc, required=True):
         """Add a goals field to a form description.
@@ -539,7 +534,7 @@ class RegistrationView(APIView):
         # Translators: This phrase appears above a field on the registration form
         # meant to hold the user's reasons for registering with edX.
         goals_label = _(
-            u"Tell us why you're interested in {platform_name}"
+            u"Benieuwd waarom je ge&iuml;nteresseerd bent in {platform_name}. Vertel..."
         ).format(platform_name=settings.PLATFORM_NAME)
 
         form_desc.add_field(
@@ -671,7 +666,7 @@ class RegistrationView(APIView):
         # Translators: "Terms of service" is a legal document users must agree to
         # in order to register a new account.
         label = _(
-            u"I agree to the {platform_name} {terms_of_service}."
+            u"Ik ga akkoord met de {platform_name} {terms_of_service}."
         ).format(
             platform_name=settings.PLATFORM_NAME,
             terms_of_service=terms_link
@@ -780,7 +775,7 @@ class PasswordResetView(APIView):
         # Translators: These instructions appear on the password reset form,
         # immediately below a field meant to hold the user's email address.
         email_instructions = _(
-            u"The email address you used to register with {platform_name}"
+            u"Het emailaddres waarmee je geregistreerd bent bij {platform_name}"
         ).format(platform_name=settings.PLATFORM_NAME)
 
         form_desc.add_field(
