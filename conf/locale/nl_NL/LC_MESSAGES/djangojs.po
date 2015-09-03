@@ -4831,7 +4831,7 @@ msgstr ""
 
 #: lms/templates/student_account/login.underscore
 msgid "or sign in with"
-msgstr ""
+msgstr "of login met"
 
 #: lms/templates/student_account/login.underscore
 msgid "New to %(platformName)s?"
@@ -4875,10 +4875,10 @@ msgstr ""
 
 #: lms/templates/student_account/register.underscore
 msgid "Create an account using"
-msgstr ""
+msgstr "Maak een account aan via"
 
 #: lms/templates/student_account/register.underscore
-msgid "or create a new one here"
+msgid "of maak hieronder een account aan"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
