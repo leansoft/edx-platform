@@ -17,15 +17,15 @@ from django.core.urlresolvers import reverse
 
     <p style='padding-top:100px; text-align:center;'>
       %if not already_active:
-        ${_("Thanks for activating your account.")}
+        ${_("Bedankt voor het activeren van je account.")}
       %else:
-        ${_("This account has already been activated.")}
+        ${_("Dit account is al geactiveerd.")}
       %endif
 
       %if user_logged_in:
-        ${_("Visit your {link_start}dashboard{link_end} to see your courses.").format(link_start='<a href="/">', link_end='</a>')}
+        ${_("Ga naar {link_start}dashboard{link_end} om jouw cursussen te zien.").format(link_start='<a href="/">', link_end='</a>')}
       %else:
-        ${_("You can now {link_start}login{link_end}.").format(link_start='<a href="{url}">'.format(url=reverse('login')), link_end='</a>')}
+        ${_("Je kan nu {link_start}inloggen{link_end}.").format(link_start='<a href="{url}">'.format(url=reverse('login')), link_end='</a>')}
       %endif
     </p>
   </section>

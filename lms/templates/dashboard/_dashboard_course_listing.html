@@ -200,12 +200,12 @@ from student.helpers import (
                       ## Translators: The course's name will be added to the end of this sentence.
                       % if not is_course_blocked:
                       <a href="#unenroll-modal" class="action action-unenroll" rel="leanModal" data-course-id="${course.id | h}" data-course-number="${course.number | h}" data-dashboard-index="${dashboard_index}"
-                         onclick="set_unenroll_message('${_("Are you sure you want to unenroll from %(course_number)s?")}', '')">
+                         onclick="set_unenroll_message('${_("Weet je zeker dat je je wilt uitschrijven van  %(course_number)s?")}', '')">
                         ${_('Uitschrijven')}
                       </a>
                       % else:
                       <a class="action action-unenroll is-disabled" data-course-id="${course.id | h}" data-course-number="${course.number | h}" data-dashboard-index="${dashboard_index}"
-                         onclick="set_unenroll_message('${_("Are you sure you want to unenroll from %(course_number)s?")}', '')">
+                         onclick="set_unenroll_message('${_("Weet je zeker dat je je wilt uitschrijven van %(course_number)s?")}', '')">
                         ${_('Uitschrijven')}
                       </a>
                       % endif
