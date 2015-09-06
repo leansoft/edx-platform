@@ -59,9 +59,9 @@ def url_class(is_active):
       % for tab in get_course_tab_list(request, course):
         <%
           if(tab.name == 'Courseware'):
-            tab.name = 'Overzicht'
+            tab.name = 'Cursus'
           if(tab.name == "Course Info"):
-            tab.name = 'Cursus informatie'
+            tab.name = 'Nieuws'
           if(tab.name == "Discussion"):
             tab.name = "Discussie"
 
