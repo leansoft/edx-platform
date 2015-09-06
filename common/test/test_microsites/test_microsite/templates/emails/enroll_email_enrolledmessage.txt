@@ -1,20 +1,19 @@
 <%! from django.utils.translation import ugettext as _ %>
 
-${_("Dear {full_name}").format(full_name=full_name)}
+${_("Beste {full_name}").format(full_name=full_name)}
 
-${_("You have been enrolled in {course_name} at {site_name} by a member "
-	"of the course staff. The course should now appear on your {site_name} "
-	"dashboard.").format(
+${_("Je bent aangemeld voor {course_name} op {site_name} door een van de stafleden."
+	"De omooc reeks is vanaf nu op jouw {site_name} dashboard te bekijken.").format(
 		course_name=course.display_name_with_default,
 		site_name=site_name
 	)}
 
-${_("To start accessing course materials, please visit {course_url}").format(
+${_("Om cursusmateriaal te bekijken, surf naar  {course_url}").format(
 		course_url=course_url
 	)}
 
 ----
-${_("This email was automatically sent from {site_name} to "
+${_("Deze e-mail is automatisch verzonden vanuit omooc.nl {site_name} aan "
 	"{full_name}").format(
 		site_name=site_name, full_name=full_name
 	)}

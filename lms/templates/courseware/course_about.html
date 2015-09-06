@@ -241,9 +241,12 @@ from edxmako.shortcuts import marketing_link
                 site_domain = microsite.get_value('site_domain', settings.SITE_NAME)
                 platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
 
+            Ik heb mij geregistreerd voor #omooc op www.omooc.nl voor online hoorcolleges #overheid. Meld je ook aan!
+
+
                 # Translators: This text will be automatically posted to the student's
                 # Twitter account. {url} should appear at the end of the text.
-                tweet_text = _("Ik heb mij geregistreerd voor #{number} '{title}' via {account}: {url}").format(
+                tweet_text = _("Ik heb mij geregistreerd voor %23omooc voor online hoorcolleges %23overheid%3A {url}. Meld je ook aan!").format(
                     number=course.number,
                     title=get_course_about_section(course, 'title'),
                     account=microsite.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
@@ -267,11 +270,10 @@ from edxmako.shortcuts import marketing_link
                 email_body += "Omooc is een nieuwe manier van kennis delen in de publieke sector. Een course van omooc bestaat uit vijf of acht online videocolleges. Opgebouwd rond een actueel thema en gegeven door toonaangevende sprekers. Die vertellen hun verhaal op een frisse, inspirerende manier. Je kunt de videocolleges via omooc.nl op elk moment bekijken, in jouw eigen tijd en tempo. Wil je na het college meer weten? Start via de website een discussie met de spreker of met mij als je medestudent!\n";
                 email_body += "\n";
                 email_body += "Alvast veel kijk plezier!\n";
-                email_body = urllib.quote_plus(email_body);
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Volg ook een cursus via {platform} online").format(platform=platform_name),
-                    body=_(email_body).format(
+                    body=urllib.quote_plus(_(email_body).format(
                         number=course.number,
                         title=get_course_about_section(course, 'title'),
                         platform=platform_name,
@@ -279,8 +281,8 @@ from edxmako.shortcuts import marketing_link
                             domain=site_domain,
                             path=reverse('about_course', args=[course.id.to_deprecated_string()]),
                         )
-                    )
-                ).replace(u" ", u"%20");
+                    ))
+                );
               %>
 
 
