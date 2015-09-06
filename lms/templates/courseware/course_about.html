@@ -246,7 +246,8 @@ from edxmako.shortcuts import marketing_link
 
                 # Translators: This text will be automatically posted to the student's
                 # Twitter account. {url} should appear at the end of the text.
-                tweet_text = _("Ik heb mij geregistreerd voor %23omooc voor online hoorcolleges %23overheid%3A {url}. Meld je ook aan!").format(
+                # Ik heb mij geregistreerd voor de #omooc 'titel'. Meld je ook aan en volg de online hoorcolleges op www.omooc.nl
+                tweet_text = _("Ik heb mij geregistreerd voor de %23omooc '{title}'. Meld je ook aan en volg de online hoorcolleges op www.omooc.nl!").format(
                     number=course.number,
                     title=get_course_about_section(course, 'title'),
                     account=microsite.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),

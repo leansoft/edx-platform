@@ -17,9 +17,9 @@ from django.core.urlresolvers import reverse
 
     <p style='padding-top:100px; text-align:center;'>
       %if not already_active:
-        ${_("Bedankt voor het activeren van je account.")}
+        ${_("Thanks for activating your account.")}
       %else:
-        ${_("Dit account is al geactiveerd.")}
+        ${_("This account has already been activated.")}
       %endif
 
       %if user_logged_in:

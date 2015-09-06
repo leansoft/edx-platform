@@ -1,6 +1,6 @@
 <%! from django.utils.translation import ugettext as _ %>
 
-${_("Beste {full_name}").format(full_name=full_name)}
+${_("Dear {full_name}").format(full_name=full_name)}
 
 ${_("Je bent aangemeld voor {course_name} op {site_name} door een van de stafleden."
 	"De omooc reeks is vanaf nu op jouw {site_name} dashboard te bekijken.").format(
@@ -8,7 +8,7 @@ ${_("Je bent aangemeld voor {course_name} op {site_name} door een van de stafled
 		site_name=site_name
 	)}
 
-${_("Om cursusmateriaal te bekijken, surf naar  {course_url}").format(
+${_("To start accessing course materials, please visit {course_url}").format(
 		course_url=course_url
 	)}
 

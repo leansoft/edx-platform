@@ -15,8 +15,8 @@
     <% if (context.currentProvider) { %>
         <div class="status" aria-hidden="false">
             <p class="message-copy">
-                <%- _.sprintf( gettext("You've successfully signed into %(currentProvider)s."), context ) %>
-                <%- _.sprintf( gettext("We just need a little more information before you start learning with %(platformName)s."), context ) %>
+                <%- _.sprintf( gettext("Je bent succesvol ingelogd met %(currentProvider)s."), context ) %>
+                <%- _.sprintf( gettext("We hebben nog wat extra informatie van je nodig voordat je kan beginnen met %(platformName)s."), context ) %>
             </p>
         </div>
     <% } else if ( context.providers.length > 0 || context.hasSecondaryProviders ) {  %>
