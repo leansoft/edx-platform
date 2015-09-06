@@ -13,7 +13,7 @@ ${_("Om cursusmateriaal te bekijken, surf naar {course_url}").format(
 	)}
 
 ----
-${_("Deze e-mail is automatisch verzonden vanuit omooc.nl {site_name} aan "
+${_("Deze e-mail is automatisch verzonden vanuit {site_name} aan "
 	"{full_name}").format(
 		site_name=site_name, full_name=full_name
 	)}
