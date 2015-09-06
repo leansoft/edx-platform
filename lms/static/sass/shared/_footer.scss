@@ -179,6 +179,7 @@
 
     // platform Open edX logo and link
     .footer-about-openedx {
+      margin-top: -17px;
       @include span-columns(4);
       @include text-align(right);
       vertical-align: bottom;
