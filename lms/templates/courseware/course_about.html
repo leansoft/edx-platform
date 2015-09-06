@@ -1,5 +1,6 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
+import urllib
 from microsite_configuration import microsite
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
@@ -241,7 +242,6 @@ from edxmako.shortcuts import marketing_link
                 site_domain = microsite.get_value('site_domain', settings.SITE_NAME)
                 platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
 
-            Ik heb mij geregistreerd voor #omooc op www.omooc.nl voor online hoorcolleges #overheid. Meld je ook aan!
 
 
                 # Translators: This text will be automatically posted to the student's
@@ -273,7 +273,7 @@ from edxmako.shortcuts import marketing_link
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Volg ook een cursus via {platform} online").format(platform=platform_name),
-                    body=urllib.quote_plus(_(email_body).format(
+                    body=urllib.quote(_(email_body).format(
                         number=course.number,
                         title=get_course_about_section(course, 'title'),
                         platform=platform_name,
