@@ -8,12 +8,12 @@ ${_("Je bent aangemeld voor {course_name} op {site_name} door een van de stafled
 		site_name=site_name
 	)}
 
-${_("To start accessing course materials, please visit {course_url}").format(
+${_("Om cursusmateriaal te bekijken, surf naar {course_url}").format(
 		course_url=course_url
 	)}
 
 ----
-${_("Deze e-mail is automatisch verzonden vanuit omooc.nl {site_name} aan "
+${_("Deze e-mail is automatisch verzonden vanuit {site_name} aan "
 	"{full_name}").format(
 		site_name=site_name, full_name=full_name
 	)}
