@@ -104,6 +104,8 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .course-date {
           @include line-height(14);
           padding: ($baseline/10) ($baseline*0.75);
+          position: absolute;
+          bottom: 14px;
         }
       }
 

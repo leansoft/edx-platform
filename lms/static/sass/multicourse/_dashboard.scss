@@ -263,6 +263,7 @@
         @include float(left);
         @include margin-right(flex-gutter());
         width: flex-grid(3);
+        margin-top: 14px;
 
         .cover {
           @include box-sizing(border-box);
