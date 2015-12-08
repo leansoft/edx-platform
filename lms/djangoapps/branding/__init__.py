@@ -51,28 +51,4 @@ def get_logo_url():
     """
     Return the url for the branded logo image to be used
     """
-
-    # if the MicrositeConfiguration has a value for the logo_image_url
-    # let's use that
-    image_url = microsite.get_value('logo_image_url')
-    if image_url:
-        return '{static_url}{image_url}'.format(
-            static_url=settings.STATIC_URL,
-            image_url=image_url
-        )
-
-    # otherwise, use the legacy means to configure this
-    university = microsite.get_value('university')
-
-    if university is None and settings.FEATURES.get('IS_EDX_DOMAIN', False):
-        return '{static_url}images/edx-theme/edx-logo-77x36.png'.format(
-            static_url=settings.STATIC_URL
-        )
-    elif university:
-        return '{static_url}images/{uni}-on-edx-logo.png'.format(
-            static_url=settings.STATIC_URL, uni=university
-        )
-    else:
-        return '{static_url}images/default-theme/logo.png'.format(
-            static_url=settings.STATIC_URL
-        )
+    return '{static_url}images/default-theme/logo-omooc.png'
