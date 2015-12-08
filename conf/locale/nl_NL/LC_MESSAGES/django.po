@@ -6754,7 +6754,7 @@ msgstr ""
 msgid ""
 "If you didn't request this change, you can disregard this email - we have "
 "not yet reset your password."
-msgstr ""
+msgstr "Als je deze wachtwoordwijziging niet hebt aangevraagd, kun je deze e-mail negeren. Wij hebben je wachtwoord in elk geval niet gewijzigd"
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Thanks for using our site!"
