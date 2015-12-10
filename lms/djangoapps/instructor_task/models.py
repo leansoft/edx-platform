@@ -417,6 +417,6 @@ class LocalFSReportStore(ReportStore):
         files.sort(key=lambda (filename, full_path): os.path.getmtime(full_path), reverse=True)
 
         return [
-            (filename, ("/" + urllib.quote(full_path).replace('/tmp/edx-s3/grades', 'grades'))
-            for filename, full_path in files)
+            (filename, ("/" + urllib.quote(full_path).replace('/tmp/edx-s3/grades', 'grades')))
+            for filename, full_path in files
         ]
