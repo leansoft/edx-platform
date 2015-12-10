@@ -418,5 +418,5 @@ class LocalFSReportStore(ReportStore):
 
         return [
             (filename, ("/" + urllib.quote(full_path).replace('/tmp/edx-s3/grades', 'grades'))
-            for filename, full_path in files
+            for filename, full_path in files)
         ]
