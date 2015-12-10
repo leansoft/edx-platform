@@ -51,4 +51,5 @@ def get_logo_url():
     """
     Return the url for the branded logo image to be used
     """
-    return '{static_url}images/default-theme/logo-omooc.png'
+    return '{static_url}images/default-theme/logo-omooc.png'.format(static_url=settings.STATIC_URL)
+

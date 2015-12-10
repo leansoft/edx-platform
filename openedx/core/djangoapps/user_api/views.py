@@ -611,15 +611,14 @@ class RegistrationView(APIView):
             # in order to register a new account.
             terms_text = _(u"Terms of Service and Honor Code")
 
-        terms_link = u"<a href=\"{url}\">{terms_text}</a>".format(
-            url=marketing_link("HONOR"),
-            terms_text=terms_text
+        terms_link = u"<a href=\"{url}\">privacyverklaring</a>".format(
+            url=marketing_link("PRIVACY")
         )
 
         # Translators: "Terms of Service" is a legal document users must agree to
         # in order to register a new account.
         label = _(
-            u"Ik ga akkoord met {platform_name} {terms_of_service}."
+            u"Ik ga akkoord met de {terms_of_service} van {platform_name}."
         ).format(
             platform_name=settings.PLATFORM_NAME,
             terms_of_service=terms_link

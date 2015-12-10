@@ -116,6 +116,11 @@
     .wrapper-logo {
       margin: ($baseline*0.75) 0;
 
+      img{
+        max-width: 250px;
+        margin: 10px;
+      }
+
       a {
         display: inline-block;
         text-align: center;
